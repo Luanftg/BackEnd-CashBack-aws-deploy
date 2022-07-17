@@ -2,10 +2,10 @@ import express, { json } from 'express';
 import routes from './src/routes/index.js';
 import 'dotenv/config';
 
-//const PORT = process.env.PORT;
+const PORT = process.env.PORT  || 3000;
 //const HOST = process.env.HOST;
-const PORT = 3000;
-const HOST = '44.203.56.87';
+//const PORT = 3000;
+//const HOST = '';
 
 const app = express();
 app.use(express.json());
