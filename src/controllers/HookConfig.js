@@ -8,7 +8,7 @@ const hookConfigController = {
         //const passKey = process.env.appKey;
         
         if(!appkey) {
-          res.status(422).json({"message":"Você precisa enviar uma senha!"});
+          res.status(422).json({"message": "Você precisa enviar uma senha!" });
         } else {
           const passKey = 'vtex-bitsized';
           if( appkey === passKey){
