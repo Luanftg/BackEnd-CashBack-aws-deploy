@@ -5,7 +5,7 @@ import 'dotenv/config';
 const PORT = process.env.PORT  || 3000;
 //const HOST = process.env.HOST;
 //const PORT = 3000;
-//const HOST = '';
+const HOST = '';
 
 const app = express();
 app.use(express.json());
