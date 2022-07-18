@@ -11,6 +11,7 @@ const hookConfigController = {
           res.status(422).json({"message": "Bad Request!!!" });  
         } else if (OrderId) { 
           OrderIds.push(OrderId);
+          console.log(OrderIds);
           res.sendStatus(201);
 
         } else {
