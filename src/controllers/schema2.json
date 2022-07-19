@@ -1,0 +1,49 @@
+{
+    "title": "cashback",
+    "properties": {
+        "updatedIn": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Atualizado em"
+        },
+        "email": {
+            "type": "string",
+            "format": "email",
+            "title": "Email"
+        },
+        "createdIn": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Criado em"
+        },
+        "OrdersInvoicedId": {
+            "type": "string",
+            "maxLength": 50,
+            "title": "ID de pedidos faturados"
+        },
+        "cashbackPoints": {
+            "type": "integer",
+            "title": "cashbackPoints"
+        }
+    },
+    "v-cache": false,
+    "required": [
+        "email",
+        "OrdersInvoicedId",
+        "cashbackPoints"
+    ],
+    "v-indexed": [
+        "email",
+        "cashbackPoints",
+        "createdIn",
+        "OrdersInvoicedId",
+        "updatedIn"
+    ],
+    "v-security": {
+        "allowGetAll": false,
+        "publicRead": ["updatedIn", "OrdersInvoicedId", "createdIn", "cashbackPoints", "email"],
+        "publicWrite": ["field1"],
+        "publicFilter": ["field1"]
+    },
+    "v-canonicalto": "https://bitsized.vtexcommercestable.com.br/api/dataentities/CL/schemas/cashback"
+}
