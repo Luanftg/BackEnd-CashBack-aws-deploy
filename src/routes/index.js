@@ -1,6 +1,7 @@
 import express from "express";
 import healthCheck from "../controllers/HealthCheck.js";
-import hookConfigController from "../controllers/HookConfig.js";
+import hookNotificationOrder from "../controllers/HookNotificationOrder.js";
+import ping from '../midlewares/ping.js';
 
 const routes = express.Router();
 
@@ -8,6 +9,6 @@ const routes = express.Router();
 routes.get('/', healthCheck.hello );
   
   // POST method route
-routes.post('/', hookConfigController.ping );
+routes.post('/',ping, hookNotificationOrder.getId );
 
 export default routes;

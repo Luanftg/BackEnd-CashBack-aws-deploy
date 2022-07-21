@@ -1,0 +1,41 @@
+{
+    "title": "cashback",
+    "properties": {
+        "cashbackPoints": {
+            "type": "integer",
+            "title": "cashbackPoints"
+        },
+        "email": {
+            "type": "string",
+            "title": "email"
+        },
+        "document": {
+            "type": "string",
+            "title": "document"
+        }
+    },
+    "v-cache": false,
+    "required": [
+        "cashbackPoints",
+        "email"
+    ],
+    "v-indexed": [
+        "cashbackPoints",
+        "email"
+    ],
+    "v-security": {
+        "allowGetAll": false,
+        "publicRead": [
+            "cashbackPoints",
+            "email"
+        ],
+        "publicWrite": [
+            "cashbackPoints",
+            "email"
+        ],
+        "publicFilter": [
+            "cashbackPoints",
+            "email"
+        ]
+    }
+}
